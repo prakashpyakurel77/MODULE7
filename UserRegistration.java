@@ -50,17 +50,18 @@ public class UserRegistrationForm extends JFrame{
 	            String confirmPassword = new String(confirmPasswordField.getPassword());
 
 	            if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-	               JOptionPane.showMessageDialog(null, "All fields must be filled in.", "Error", JOptionPane.ERROR_MESSAGE);
-	               return;
+	            	System.out.println("Error: All fields must be filled in.");
+	                return;
 	            }
 
 	            if (!password.equals(confirmPassword)) {
-	               JOptionPane.showMessageDialog(null, "Passwords do not match.", "Error", JOptionPane.ERROR_MESSAGE);
-	               return;
+	            	System.out.println("Error: Passwords do not match.");
+	                return;
 	            }
 
-	            String info = "Name: " + name + "\nEmail: " + email;
-	            JOptionPane.showMessageDialog(null, info, "Registration Successful", JOptionPane.INFORMATION_MESSAGE);
+	            System.out.println("Registration Successful!");
+	            System.out.println("Name: " + name);
+	            System.out.println("Email: " + email);
 	         }
 	      });
 
